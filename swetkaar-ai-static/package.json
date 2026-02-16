@@ -1,0 +1,12 @@
+{
+  "name": "swetkaar-ai-static",
+  "version": "1.0.0",
+  "description": "Swetkaar AI Static Website",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "serve": "npx http-server -p 8080 -o"
+  },
+  "devDependencies": {}
+}
+
+

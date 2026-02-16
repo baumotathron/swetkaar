@@ -1,0 +1,22 @@
+{
+  "name": "Swetkaar AI - Next-Generation Creative Agency",
+  "short_name": "Swetkaar AI",
+  "description": "Craft transformative brand worlds that fuse mythic creativity with advanced AI storytelling, design, and immersive experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0066ff",
+  "icons": [
+    {
+      "src": "/swetkaar_logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/swetkaar_logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
+
