@@ -2,37 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Disable text selection and cursor for all text elements */
-* {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: default;
-}
-
-/* Allow text selection and cursor for form inputs and textareas */
-input,
-textarea,
-select,
-[contenteditable="true"],
-[role="textbox"] {
-  user-select: text;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  cursor: text;
-}
-
-/* Allow text selection for links (for accessibility) */
-a {
-  user-select: none;
-  cursor: pointer;
-}
-
 :root {
   color-scheme: dark;
   background-color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(0, 84, 152, 0.9), rgba(1, 64, 116, 0.75));
+  background: linear-gradient(180deg, rgba(74, 159, 229, 0.7), rgba(1, 64, 116, 0.6));
   border-radius: 9999px;
 }
 
@@ -62,7 +38,7 @@ body {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(0, 84, 152, 0.7), rgba(1, 64, 116, 0.2));
+  background: linear-gradient(135deg, rgba(74, 159, 229, 0.5), rgba(1, 64, 116, 0.2));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -72,7 +48,7 @@ body {
 
 .glass-panel {
   background: linear-gradient(135deg, rgba(15, 30, 68, 0.75), rgba(5, 15, 35, 0.75));
-  border: 1px solid rgba(0, 84, 152, 0.25);
+  border: 1px solid rgba(74, 159, 229, 0.2);
   backdrop-filter: blur(18px);
 }
 
@@ -97,5 +73,3 @@ body {
   opacity: 0.5;
   pointer-events: none;
 }
-
-

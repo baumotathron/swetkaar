@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         midnight: "#000000",
-        electric: "#005498",
+        electric: "#4A9FE5",
         "tech-blue": "#014074",
         "tech-blue-dark": "#003A6A",
         gold: "#fdc500",
@@ -18,13 +18,13 @@ const config: Config = {
       },
       backgroundImage: {
         "radial-glow":
-          "radial-gradient(circle at top left, rgba(0,84,152,0.35), transparent 55%)",
+          "radial-gradient(circle at top left, rgba(74,159,229,0.25), transparent 55%)",
         "orb-gradient":
-          "radial-gradient(circle at 20% 20%, rgba(1,64,116,0.45), transparent 60%), radial-gradient(circle at 80% 10%, rgba(0,84,152,0.3), transparent 55%)"
+          "radial-gradient(circle at 20% 20%, rgba(1,64,116,0.35), transparent 60%), radial-gradient(circle at 80% 10%, rgba(74,159,229,0.2), transparent 55%)"
       },
       boxShadow: {
-        glow: "0 0 30px rgba(0,84,152,0.45)",
-        "inner-glow": "inset 0 0 30px rgba(0,84,152,0.25)"
+        glow: "0 0 30px rgba(74,159,229,0.35)",
+        "inner-glow": "inset 0 0 30px rgba(74,159,229,0.2)"
       },
       fontFamily: {
         display: ["var(--font-syne)"],
@@ -36,4 +36,3 @@ const config: Config = {
 };
 
 export default config;
-
