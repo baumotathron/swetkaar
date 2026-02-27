@@ -32,7 +32,7 @@ export function Navigation() {
         isScrolled ? "py-3 backdrop-blur-xl" : "py-6"
       )}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-electric/30 bg-black/70 px-6 py-3 shadow-inner-glow transition-all">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-electric/30 bg-black/70 px-6 py-3 shadow-inner-glow backdrop-blur-xl transition-all">
         <Link href="/" className="flex items-center gap-3">
           <span className="logo_main relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-electric/20">
             <span className="absolute inset-0 animate-pulse rounded-full bg-electric/40 blur-xl" />
@@ -62,16 +62,18 @@ export function Navigation() {
           ))}
         </nav>
         <div className="hidden items-center gap-4 md:flex">
-          <Link
-            href="/instagram"
+          <a
+            href="https://www.instagram.com/swetkaar.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-electric transition hover:border-electric hover:bg-electric/20"
           >
             <Instagram className="h-4 w-4" />
             <span>Instagram</span>
             <ArrowUpRight className="h-3 w-3 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
+          </a>
           <Link
-            href="#contact"
+            href="/#contact"
             className="rounded-full border border-gold/60 bg-gradient-to-r from-gold/20 via-gold/15 to-transparent px-5 py-2 text-sm font-semibold text-gold transition hover:border-gold hover:bg-gold/20"
           >
             Let's Talk
@@ -111,16 +113,18 @@ export function Navigation() {
               ))}
             </ul>
             <div className="mt-6 grid gap-3">
-              <Link
-                href="/instagram"
+              <a
+                href="https://www.instagram.com/swetkaar.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-electric transition hover:border-electric hover:bg-electric/20"
               >
                 <Instagram className="h-4 w-4" />
                 <span>Instagram</span>
                 <ArrowUpRight className="h-3 w-3 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
+              </a>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="rounded-full border border-gold/60 bg-gradient-to-r from-gold/20 via-transparent to-transparent px-5 py-3 text-center text-sm font-semibold text-gold transition hover:border-gold hover:bg-gold/20"
               >
                 Let's Talk

@@ -12,7 +12,7 @@ export function Footer() {
               Swetkaar AI
             </span>
             <h3 className="mt-4 font-display text-3xl text-white">
-              Craft the story only your future remembers.
+              Let&apos;s build something that converts.
             </h3>
           </div>
           <div className="flex flex-col items-end gap-3">

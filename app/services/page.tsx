@@ -10,14 +10,13 @@ import {
   Bot,
   Video,
   Sparkles,
-  BarChart3,
   Cpu,
-  Plug,
   ArrowRight,
-  Search,
-  Rocket,
-  MessageSquare,
+  FileText,
+  Instagram,
 } from "lucide-react";
+
+const INSTAGRAM_URL = "https://www.instagram.com/swetkaar.ai/";
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -27,21 +26,24 @@ const services = [
     number: "01",
     title: "Strategic Branding",
     icon: Palette,
+    showPortfolio: true,
     intro:
-      "Look credible, coherent, and category-right — before you scale spend. AI-powered branding and content that looks premium, stays consistent, and scales effortlessly.",
+      "We don't just create content — we start with strategy. A deep-dive brand report defines your positioning, audience, and visual direction. Then we produce premium content built on that foundation.",
     deliverables: [
       {
-        label: "Video content",
-        icon: Video,
+        label: "Brand strategy report",
+        icon: FileText,
         items: [
-          "5 short-form viral reels",
-          "Brand-led, product-led & lifestyle narratives",
+          "Brand positioning & audience mapping",
+          "Visual direction & style guide",
+          "Content roadmap & narrative framework",
         ],
       },
       {
-        label: "Cinematic product visuals",
+        label: "Premium content production",
         icon: Sparkles,
         items: [
+          "5 short-form viral reels",
           "5 cinematic product shots",
           "AI-assisted environments & lighting",
           "High-end, brand-safe visuals",
@@ -54,86 +56,61 @@ const services = [
     number: "02",
     title: "AI Films & Ads",
     icon: Film,
+    showPortfolio: true,
     intro:
-      "Ads and films that stop the scroll and drive conversion. Premium, emotional storytelling — designed to sell.",
+      "Cinematic ad films crafted by VFX experts using AI — giving you traditional production quality in a fraction of the time. Human creative direction meets AI-powered execution.",
     deliverables: [
       {
-        label: "Hero ad films",
-        icon: Film,
+        label: "Creative direction",
+        icon: FileText,
         items: [
-          "2 professional cinematic ad films",
-          "Concept, script & storyboard included",
+          "Concept development & scripting",
+          "Storyboard & shot planning",
+          "Brand narrative & messaging strategy",
         ],
       },
       {
-        label: "High-end production",
+        label: "Production & delivery",
         icon: Sparkles,
         items: [
-          "AI-generated cinematic scenes",
+          "2 cinematic ad films by VFX experts using AI",
           "VFX compositing & motion design",
           "Sound design & visual polish",
-          "Platform-optimized formats & cutdowns",
-          "Conversion-driven narratives",
+          "Platform-optimized cutdowns for every channel",
         ],
       },
     ],
   },
   {
-    id: "ai-automations",
+    id: "ai-consulting",
     number: "03",
-    title: "AI Automations",
+    title: "AI Consulting & Implementation",
     icon: Bot,
     intro:
-      "Automate the busywork. Intelligent AI systems that handle repetitive tasks, surface insights from your data, and run 24/7 — so your team focuses on growth.",
+      "You know AI matters — but where will it actually move the needle? Our AI product managers audit your operations, deliver an Impact Report with the highest-ROI opportunities, and build the solutions.",
     deliverables: [
       {
-        label: "Intelligent analytics",
-        icon: BarChart3,
+        label: "AI Impact Report",
+        icon: FileText,
         items: [
-          "Custom analytics pipeline setup",
-          "Real-time reporting dashboard",
-          "Monthly insight reports for 3 months",
+          "Operational audit & process mapping",
+          "AI opportunity scoring with ROI estimates",
+          "Prioritized implementation roadmap",
         ],
       },
       {
-        label: "Agentic AI systems",
+        label: "Build & deploy",
         icon: Cpu,
         items: [
-          "2 custom AI agents for your workflows",
-          "Slack, email & CRM integration",
-          "30-day optimization & monitoring",
-        ],
-      },
-      {
-        label: "Custom AI integration",
-        icon: Plug,
-        items: [
-          "API integration with your existing stack",
-          "Custom model fine-tuning",
-          "Documentation & team training session",
+          "Custom AI agents & workflow automation",
+          "Integration with your existing tools & stack",
+          "Team training & handoff documentation",
         ],
       },
     ],
   },
 ];
 
-const processSteps = [
-  {
-    icon: Search,
-    title: "Discover",
-    desc: "We learn your brand, audience, and goals inside-out.",
-  },
-  {
-    icon: Rocket,
-    title: "Create",
-    desc: "AI-powered production delivers premium output at speed.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Launch & Iterate",
-    desc: "Ship fast, measure results, optimize continuously.",
-  },
-];
 
 export default function ServicesPage() {
   return (
@@ -141,7 +118,7 @@ export default function ServicesPage() {
       <Navigation />
       <main className="flex-1">
         {/* ── Hero ── */}
-        <section className="relative flex min-h-[50vh] flex-col items-center justify-center overflow-hidden px-6 pt-32 pb-16">
+        <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-6 pt-44 pb-24">
           <div className="pointer-events-none absolute inset-0">
             <div className="orb left-[-120px] top-[-120px] h-[320px] w-[320px] bg-electric/40" />
             <div className="orb bottom-[-140px] right-[-120px] h-[260px] w-[260px] bg-gold/30" />
@@ -163,28 +140,22 @@ export default function ServicesPage() {
               transition={{ duration: 0.6, delay: 0.15, ease }}
               className="mx-auto mt-6 max-w-xl text-lg text-white/80"
             >
-              Strategic branding, AI films, and intelligent automations —
-              delivered at the quality of a top agency and the speed of AI.
+              Premium branding, cinematic ads, and AI automations that drive
+              real revenue — delivered in weeks, not months.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease }}
-              className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+              className="mt-8"
             >
               <Link
                 href="/#contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold"
+                className="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold"
               >
                 Book a free call
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
               </Link>
-              <a
-                href="#strategic-branding"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-sm font-medium text-white/80 transition hover:border-white/40 hover:text-white"
-              >
-                Explore services
-              </a>
             </motion.div>
           </div>
         </section>
@@ -194,7 +165,7 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4, ease }}
-          className="mx-auto flex flex-wrap justify-center gap-3 px-6 pb-20"
+          className="mx-auto flex flex-wrap justify-center gap-3 px-6 pb-14"
         >
           {services.map((s) => (
             <a
@@ -210,7 +181,7 @@ export default function ServicesPage() {
 
         {/* ── Service cards ── */}
         <section className="relative mx-auto w-full max-w-5xl px-6 pb-32">
-          <div className="space-y-20">
+          <div className="space-y-24">
             {services.map((service) => (
               <motion.article
                 key={service.id}
@@ -219,20 +190,18 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.7, ease }}
-                className="scroll-mt-32 overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:border-gold/30"
+                className="scroll-mt-40 overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:border-gold/30"
               >
                 <div className="p-8 md:p-12">
                   {/* Header */}
-                  <div className="flex items-center gap-4">
-                    <span className="rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.3em] text-gold">
-                      {service.number}
+                  <div className="inline-flex items-center gap-2.5 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-gold">
+                    <service.icon className="h-4 w-4" />
+                    <span className="text-xs font-bold uppercase tracking-[0.25em]">
+                      {service.number} · {service.title}
                     </span>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/30 bg-gold/10 text-gold">
-                      <service.icon className="h-6 w-6" />
-                    </div>
                   </div>
 
-                  <h2 className="mt-6 font-display text-3xl text-white md:text-4xl">
+                  <h2 className="mt-5 font-display text-3xl text-white md:text-4xl">
                     {service.title}
                   </h2>
 
@@ -276,7 +245,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Per-service CTA */}
-                  <div className="mt-10 flex items-center gap-6 border-t border-white/10 pt-8">
+                  <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
                     <Link
                       href="/#contact"
                       className="group/cta inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-black transition hover:bg-soft-gold"
@@ -284,55 +253,27 @@ export default function ServicesPage() {
                       Get a quote
                       <ArrowRight className="h-4 w-4 transition group-hover/cta:translate-x-1" />
                     </Link>
-                    <span className="text-xs text-white/50">
-                      Free consultation included
-                    </span>
+                    {service.showPortfolio ? (
+                      <a
+                        href={INSTAGRAM_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/ig inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2.5 text-sm text-white/60 transition hover:border-gold/40 hover:bg-gold/10 hover:text-gold"
+                      >
+                        <Instagram className="h-4 w-4" />
+                        <span>@swetkaar.ai</span>
+                        <ArrowRight className="h-3.5 w-3.5 transition group-hover/ig:translate-x-1" />
+                      </a>
+                    ) : (
+                      <span className="text-xs text-white/50">
+                        Free consultation included
+                      </span>
+                    )}
                   </div>
                 </div>
               </motion.article>
             ))}
           </div>
-
-          {/* ── How we work ── */}
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease }}
-            className="mt-32"
-          >
-            <div className="mb-12 text-center">
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-                How we work
-              </span>
-              <h2 className="mt-3 font-display text-3xl text-white md:text-4xl">
-                Three steps to launch
-              </h2>
-            </div>
-            <div className="grid gap-8 md:grid-cols-3">
-              {processSteps.map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1, ease }}
-                  className="relative rounded-2xl border border-white/10 bg-white/5 p-8 text-center"
-                >
-                  <span className="absolute -top-3 left-6 rounded-full bg-gold px-3 py-0.5 text-xs font-bold text-black">
-                    {i + 1}
-                  </span>
-                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/25 bg-gold/10 text-gold">
-                    <step.icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="font-display text-xl text-white">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-white/70">{step.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
 
           {/* ── Final CTA ── */}
           <motion.div
