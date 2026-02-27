@@ -47,15 +47,7 @@ next-env.d.ts
 
 # OS
 Thumbs.db
-.DS_Store
 
 # Cache
 .cache/
 .parcel-cache/
-
-# Optional: Remove static folder if not needed
-# /swetkaar-ai-static
-
-# Cleanup script output (if you generate one)
-cleanup.sh.log
-
