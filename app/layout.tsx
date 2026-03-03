@@ -1,19 +1,6 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-
-const syne = Syne({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-syne"
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-manrope"
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://swetkaar.ai'),
@@ -149,10 +136,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body
         className={cn(
-          syne.variable,
-          manrope.variable,
           "bg-midnight text-white font-body antialiased selection:bg-electric/60 selection:text-white"
         )}
+        style={{
+          "--font-syne": "system-ui, -apple-system, sans-serif",
+          "--font-manrope": "system-ui, -apple-system, sans-serif",
+        } as React.CSSProperties}
       >
         <div className="fixed inset-0 -z-10 bg-midnight">
           <div className="absolute inset-0 bg-orb-gradient opacity-60" />
