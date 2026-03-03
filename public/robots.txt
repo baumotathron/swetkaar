@@ -16,6 +16,3 @@ Allow: /images/
 Allow: /*.css$
 Allow: /*.js$
 
-# Crawl-delay (optional, adjust as needed)
-Crawl-delay: 1
-
