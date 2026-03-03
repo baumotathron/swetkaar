@@ -58,7 +58,7 @@ export function ContactSection() {
 
       const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
       const adminEmail =
-        process.env.NEXT_PUBLIC_ADMIN_EMAIL || "treejpartner@gmail.com";
+        process.env.NEXT_PUBLIC_ADMIN_EMAIL || "hello@swetkaar.com";
 
       if (!accessKey) {
         throw new Error(
