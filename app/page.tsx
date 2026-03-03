@@ -12,7 +12,6 @@ import {
   Eye,
   Target,
 } from "lucide-react";
-import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navigation } from "@/components/Navigation";
@@ -208,8 +207,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Contact ── */}
-        <ContactSection />
+        {/* ── CTA ── */}
+        <section className="relative pb-32">
+          <div className="mx-auto w-full max-w-4xl px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.7, ease }}
+              className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center transition hover:border-gold/30 md:p-16"
+            >
+              <div className="pointer-events-none absolute inset-0">
+                <div className="orb -top-20 left-1/2 h-48 w-48 -translate-x-1/2 bg-gold/20 blur-3xl" />
+              </div>
+              <div className="relative z-10">
+                <h2 className="font-display text-3xl leading-tight text-white md:text-4xl">
+                  Ready to ignite your{" "}
+                  <span className="text-gold">next chapter</span>?
+                </h2>
+                <p className="mx-auto mt-4 max-w-lg text-white/60">
+                  Tell us about your vision. We respond within 48 hours with a
+                  tailored collaboration map.
+                </p>
+                <Link
+                  href="/contact"
+                  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold hover:shadow-[0_0_40px_rgba(253,197,0,0.25)]"
+                >
+                  Let&apos;s Talk
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

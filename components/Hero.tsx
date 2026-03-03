@@ -182,7 +182,7 @@ export function Hero() {
             className="mt-8 flex flex-wrap gap-4"
           >
             <Link
-              href="/#contact"
+              href="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold hover:shadow-[0_0_30px_rgba(253,197,0,0.25)]"
             >
               Book a free call

@@ -117,7 +117,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative pb-32">
+    <section className="relative pb-32">
       <div className="mx-auto w-full max-w-4xl px-6">
         {/* Outer card with gold animated background */}
         <motion.div

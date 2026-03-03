@@ -150,7 +150,7 @@ export default function ServicesPage() {
               className="mt-8"
             >
               <Link
-                href="/#contact"
+                href="/contact"
                 className="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold"
               >
                 Book a free call
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                   {/* Per-service CTA */}
                   <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
                     <Link
-                      href="/#contact"
+                      href="/contact"
                       className="group/cta inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-black transition hover:bg-soft-gold"
                     >
                       Get a quote
@@ -296,7 +296,7 @@ export default function ServicesPage() {
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold"
                 >
                   Book a free consultation

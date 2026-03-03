@@ -73,7 +73,7 @@ export function Navigation() {
             <ArrowUpRight className="h-3 w-3 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <Link
-            href="/#contact"
+            href="/contact"
             className="rounded-full border border-gold/60 bg-gradient-to-r from-gold/20 via-gold/15 to-transparent px-5 py-2 text-sm font-semibold text-gold transition hover:border-gold hover:bg-gold/20"
           >
             Let's Talk
@@ -124,7 +124,7 @@ export function Navigation() {
                 <ArrowUpRight className="h-3 w-3 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="rounded-full border border-gold/60 bg-gradient-to-r from-gold/20 via-transparent to-transparent px-5 py-3 text-center text-sm font-semibold text-gold transition hover:border-gold hover:bg-gold/20"
               >
                 Let's Talk

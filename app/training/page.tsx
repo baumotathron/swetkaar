@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import {
   ArrowUpRight,
-  TrendingUp,
   GraduationCap,
   Building2,
   BookOpen,
@@ -30,16 +29,6 @@ import {
 } from "lucide-react";
 
 const ease = [0.16, 1, 0.3, 1] as const;
-
-/* ───────── salary data ───────── */
-const salaryLadder = [
-  { role: "Associate Product Manager", range: "12 – 15 LPA", width: "20%" },
-  { role: "Product Manager", range: "15 – 25 LPA", width: "35%" },
-  { role: "Senior Product Manager", range: "25 – 35 LPA", width: "50%" },
-  { role: "Group / Lead PM", range: "35 – 50 LPA", width: "65%" },
-  { role: "Product Director / Head", range: "50 – 75 LPA", width: "80%" },
-  { role: "Chief Product Officer", range: "75 – 100+ LPA", width: "100%" },
-];
 
 /* ───────── curriculum ───────── */
 const curriculum = [
@@ -191,10 +180,10 @@ export default function TrainingPage() {
       <Navigation />
       <main className="flex-1">
         {/* ════════════════════ HERO ════════════════════ */}
-        <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-6 pt-36 pb-20">
-          <div className="absolute inset-0">
-            <div className="orb top-[-100px] left-[-100px] h-[300px] w-[300px] bg-electric/50" />
-            <div className="orb bottom-[-80px] right-[-80px] h-[240px] w-[240px] bg-gold/40" />
+        <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-6 pt-44 pb-24">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="orb left-[-120px] top-[-120px] h-[320px] w-[320px] bg-electric/40" />
+            <div className="orb bottom-[-140px] right-[-120px] h-[260px] w-[260px] bg-gold/30" />
           </div>
 
           <div className="relative z-10 mx-auto w-full max-w-3xl text-center">
@@ -202,7 +191,7 @@ export default function TrainingPage() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease }}
-              className="inline-flex items-center gap-3 rounded-full border border-electric/40 bg-electric/10 px-5 py-2 text-xs uppercase tracking-[0.3em] text-electric"
+              className="inline-flex items-center gap-3 rounded-full border border-gold/30 bg-gold/10 px-5 py-2 text-xs uppercase tracking-[0.3em] text-gold"
             >
               <GraduationCap className="h-4 w-4" />
               Training Program
@@ -216,7 +205,7 @@ export default function TrainingPage() {
             >
               Product Management
               <br />
-              <span className="text-electric">Powered by AI</span>
+              <span className="text-gold">Powered by AI</span>
             </motion.h1>
 
             <motion.p
@@ -238,13 +227,13 @@ export default function TrainingPage() {
             >
               <Link
                 href="#curriculum"
-                className="group inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-electric transition hover:border-electric hover:bg-electric/20"
+                className="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition hover:bg-soft-gold"
               >
                 View Curriculum
                 <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="rounded-full border border-gold/60 bg-gradient-to-r from-gold/20 via-gold/15 to-transparent px-6 py-3 text-sm font-semibold text-gold transition hover:border-gold hover:bg-gold/20"
               >
                 Request a Session
@@ -253,8 +242,56 @@ export default function TrainingPage() {
           </div>
         </section>
 
-        {/* ════════════════════ SALARY LADDER ════════════════════ */}
-        <section className="relative mx-auto w-full max-w-4xl px-6 py-20">
+        {/* ════════════════════ AI TOOLS STRIP ════════════════════ */}
+        <section className="relative mx-auto w-full max-w-5xl px-6 py-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease }}
+            className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-10"
+          >
+            <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.35em] text-gold">
+              AI Tools You&apos;ll Master
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+              {[
+                { name: "Claude", logo: "/logos/claude.svg" },
+                { name: "Claude Code", logo: "/logos/claudecode.svg" },
+                { name: "Cursor", logo: "/logos/cursor.svg" },
+                { name: "Vercel", logo: "/logos/vercel.svg" },
+                { name: "n8n", logo: "/logos/n8n.svg" },
+                { name: "MCP", logo: "/logos/mcp.svg" },
+                { name: "LangChain", logo: "/logos/langchain.svg" },
+                { name: "Make", logo: "/logos/make.svg" },
+              ].map((tool, i) => (
+                <motion.div
+                  key={tool.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.04, ease }}
+                  className="flex flex-col items-center gap-2"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2.5 transition hover:border-gold/30 hover:bg-gold/5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={tool.logo}
+                      alt={tool.name}
+                      className="h-full w-full object-contain opacity-70 transition hover:opacity-100"
+                    />
+                  </div>
+                  <span className="text-[10px] font-medium text-white/40">
+                    {tool.name}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* ════════════════════ PUNCHY STATEMENT ════════════════════ */}
+        <section className="relative mx-auto w-full max-w-5xl px-6 py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -262,48 +299,12 @@ export default function TrainingPage() {
             transition={{ duration: 0.7, ease }}
             className="text-center"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-gold">
-              <TrendingUp className="h-4 w-4" />
-              Career Trajectory
-            </span>
-            <h2 className="mt-6 font-display text-3xl text-white md:text-4xl">
-              The Product Management Career Ladder
+            <h2 className="mx-auto max-w-2xl font-display text-3xl leading-tight text-white md:text-4xl lg:text-5xl">
+              AI Doesn&apos;t Replace PMs.
+              <br />
+              <span className="text-gold">It Exposes the Ones Who Aren&apos;t Real.</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base text-white/60">
-              Product Management is one of the highest-paying career paths in tech. Here&apos;s what the market pays.
-            </p>
           </motion.div>
-
-          <div className="mt-14 space-y-4">
-            {salaryLadder.map((item, i) => (
-              <motion.div
-                key={item.role}
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: i * 0.08, ease }}
-                className="group"
-              >
-                <div className="mb-1.5 flex items-baseline justify-between">
-                  <span className="text-sm font-medium text-white/80 transition group-hover:text-white">
-                    {item.role}
-                  </span>
-                  <span className="text-sm font-semibold text-gold">
-                    INR {item.range}
-                  </span>
-                </div>
-                <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/5">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: item.width }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 + i * 0.08, ease }}
-                    className="h-full rounded-full bg-gradient-to-r from-electric via-electric to-gold/80"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </section>
 
         {/* ════════════════════ CURRICULUM ════════════════════ */}
@@ -315,7 +316,7 @@ export default function TrainingPage() {
             transition={{ duration: 0.7, ease }}
             className="text-center"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-electric">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-gold">
               <BookOpen className="h-4 w-4" />
               12 Modules
             </span>
@@ -335,15 +336,15 @@ export default function TrainingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.04, ease }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 p-6 transition duration-300 hover:border-electric/40 hover:bg-electric/5"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:border-gold/30"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-electric/30 bg-electric/10 text-electric transition group-hover:bg-electric/20">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gold/25 bg-gold/10 text-gold transition group-hover:bg-gold/20">
                     <mod.icon className="h-5 w-5" />
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-3">
-                      <span className="text-xs font-bold tracking-wider text-electric/60">
+                      <span className="text-xs font-bold tracking-wider text-gold/60">
                         {mod.num}
                       </span>
                       <h3 className="font-display text-lg text-white">
@@ -369,7 +370,7 @@ export default function TrainingPage() {
             transition={{ duration: 0.7, ease }}
             className="text-center"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-electric">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-gold">
               <Rocket className="h-4 w-4" />
               Hands-On Outcomes
             </span>
@@ -408,9 +409,9 @@ export default function TrainingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease }}
-            className="rounded-[2rem] border border-white/10 bg-black/50 px-8 py-10"
+            className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-10"
           >
-            <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.35em] text-electric">
+            <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.35em] text-gold">
               Frameworks & Methodologies Covered
             </p>
             <div className="flex flex-wrap justify-center gap-3">
@@ -421,7 +422,7 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.03, ease }}
-                  className="rounded-full border border-electric/25 bg-electric/5 px-4 py-2 text-xs font-medium text-white/70 transition hover:border-electric/50 hover:text-white"
+                  className="rounded-full border border-gold/25 bg-gold/5 px-4 py-2 text-xs font-medium text-white/70 transition hover:border-gold/50 hover:text-white"
                 >
                   {f}
                 </motion.span>
@@ -528,7 +529,7 @@ export default function TrainingPage() {
             transition={{ duration: 0.7, ease }}
             className="text-center"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-electric/40 bg-electric/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-electric">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-gold">
               <Clock className="h-4 w-4" />
               Flexible Delivery
             </span>
@@ -545,13 +546,13 @@ export default function TrainingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.08, ease }}
-                className="rounded-2xl border border-white/10 bg-black/50 p-6 text-center transition hover:border-electric/30 hover:bg-electric/5"
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center transition hover:border-gold/30"
               >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-electric/30 bg-electric/10 text-electric">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-gold/25 bg-gold/10 text-gold">
                   <format.icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-base text-white">{format.title}</h3>
-                <span className="mt-1 inline-block text-xs font-semibold text-electric/80">{format.duration}</span>
+                <span className="mt-1 inline-block text-xs font-semibold text-gold/80">{format.duration}</span>
                 <p className="mt-3 text-xs leading-relaxed text-white/55">{format.desc}</p>
               </motion.div>
             ))}
@@ -565,15 +566,15 @@ export default function TrainingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, ease }}
-            className="overflow-hidden rounded-[2rem] border border-electric/30 bg-black/60"
+            className="overflow-hidden rounded-[2rem] border border-gold/30 bg-black/60"
           >
-            <div className="border-b border-electric/20 px-8 py-8 md:px-12">
+            <div className="border-b border-gold/20 px-8 py-8 md:px-12">
               <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-electric/40 bg-electric/10 text-electric">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/40 bg-gold/10 text-gold">
                   <Building2 className="h-7 w-7" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-[0.3em] text-electric/70">
+                  <span className="text-xs uppercase tracking-[0.3em] text-gold/70">
                     For Corporates & Professionals
                   </span>
                   <h2 className="font-display text-2xl text-white md:text-3xl">
@@ -586,39 +587,39 @@ export default function TrainingPage() {
             <div className="px-8 py-10 md:px-12">
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="space-y-3">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-electric">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gold">
                     For Product Teams
                   </h3>
                   <ul className="space-y-2.5 text-sm leading-relaxed text-white/65">
                     <li className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-electric/70" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />
                       <span>Integrate AI into every stage of the product lifecycle — research, design, development, marketing</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-electric/70" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />
                       <span>Move from gut-driven to data-driven product decisions using AI analytics</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-electric/70" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />
                       <span>Build AI-powered MVPs faster — reduce ideation-to-launch timelines</span>
                     </li>
                   </ul>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-electric">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gold">
                     For Aspiring PMs
                   </h3>
                   <ul className="space-y-2.5 text-sm leading-relaxed text-white/65">
                     <li className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-electric/70" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />
                       <span>Transition into product management from engineering, design, or business roles</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-electric/70" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />
                       <span>Build a portfolio that stands out — case studies, MVP, and AI-integrated workflows</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-electric/70" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold/70" />
                       <span>Mock interviews, CV upgrade, and targeted preparation for PM hiring processes</span>
                     </li>
                   </ul>
@@ -635,7 +636,7 @@ export default function TrainingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease }}
-            className="relative mx-auto max-w-2xl overflow-hidden rounded-[2rem] border border-gold/40 bg-black/80 px-8 py-14 text-center"
+            className="relative mx-auto max-w-2xl overflow-hidden rounded-[2rem] border border-gold/30 bg-gradient-to-br from-gold/[0.08] via-black/80 to-black/80 px-8 py-14 text-center"
           >
             <div className="absolute inset-0">
               <div className="orb -top-20 left-1/2 h-48 w-48 -translate-x-1/2 bg-gold/30 blur-3xl" />
@@ -649,7 +650,7 @@ export default function TrainingPage() {
                 looking to upskill — reach out and we&apos;ll design the right format for you.
               </p>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="group mt-8 inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-gold transition hover:border-gold hover:bg-gold/20"
               >
                 <span>Get in Touch</span>
