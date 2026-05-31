@@ -312,6 +312,35 @@ export default function ServicesPage() {
             </div>
           </motion.div>
         </section>
+        {/* FAQ */}
+        <section className="relative mx-auto w-full max-w-5xl px-6 pb-28">
+          <h2 className="mb-10 text-center font-display text-3xl text-white md:text-4xl">
+            Frequently asked questions
+          </h2>
+          <div className="mx-auto flex max-w-3xl flex-col gap-4">
+            <details className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-gold/30">
+              <summary className="cursor-pointer list-none text-base font-semibold text-white">What does Swetkaar AI do?</summary>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">Swetkaar AI is an AI-powered creative agency offering strategic branding, cinematic AI ad films, and AI consulting &amp; automation — combining human creative direction with AI-accelerated execution.</p>
+            </details>
+            <details className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-gold/30">
+              <summary className="cursor-pointer list-none text-base font-semibold text-white">How fast can you deliver a project?</summary>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">Most projects ship in weeks, not months, because we pair senior creative direction with AI-accelerated production.</p>
+            </details>
+            <details className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-gold/30">
+              <summary className="cursor-pointer list-none text-base font-semibold text-white">Do you replace human creatives with AI?</summary>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">No. AI amplifies our speed and scale, while strategy, taste, and creative direction stay human.</p>
+            </details>
+            <details className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-gold/30">
+              <summary className="cursor-pointer list-none text-base font-semibold text-white">What does an AI ad film project include?</summary>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">Concept and scripting, storyboard and shot planning, VFX production using AI, sound design, and platform-optimized cutdowns for every channel.</p>
+            </details>
+            <details className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-gold/30">
+              <summary className="cursor-pointer list-none text-base font-semibold text-white">How do we get started?</summary>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">Book a free call from the contact page. We respond within 48 hours with a tailored collaboration map.</p>
+            </details>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>

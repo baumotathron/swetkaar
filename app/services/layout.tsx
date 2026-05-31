@@ -65,6 +65,51 @@ const servicesJsonLd = {
       },
       "areaServed": "Worldwide",
       "url": "https://www.swetkaar.com/services#ai-consulting"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Swetkaar AI do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Swetkaar AI is an AI-powered creative agency offering strategic branding, cinematic AI ad films, and AI consulting & automation — combining human creative direction with AI-accelerated execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you deliver a project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most projects ship in weeks, not months, because we pair senior creative direction with AI-accelerated production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you replace human creatives with AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AI amplifies our speed and scale, while strategy, taste, and creative direction stay human."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an AI ad film project include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Concept and scripting, storyboard and shot planning, VFX production using AI, sound design, and platform-optimized cutdowns for every channel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a free call from the contact page. We respond within 48 hours with a tailored collaboration map."
+          }
+        }
+      ]
     }
   ]
 };
