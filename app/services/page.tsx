@@ -265,7 +265,7 @@ export default function ServicesPage() {
                         <ArrowRight className="h-3.5 w-3.5 transition group-hover/ig:translate-x-1" />
                       </a>
                     ) : (
-                      <span className="text-xs text-white/50">
+                      <span className="text-xs text-white/70">
                         Free consultation included
                       </span>
                     )}

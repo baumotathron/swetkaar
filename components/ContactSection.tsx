@@ -199,7 +199,7 @@ export function ContactSection() {
                       className={`group flex flex-col items-center gap-3 rounded-2xl border p-5 text-center transition-all duration-300 ${
                         active
                           ? "border-gold/60 bg-gold/15 text-gold shadow-[0_0_30px_rgba(253,197,0,0.12)]"
-                          : "border-white/10 bg-white/[0.04] text-white/50 hover:border-gold/30 hover:bg-gold/[0.06] hover:text-gold/80"
+                          : "border-white/10 bg-white/[0.04] text-white/70 hover:border-gold/30 hover:bg-gold/[0.06] hover:text-gold/80"
                       }`}
                     >
                       <div
@@ -213,7 +213,7 @@ export function ContactSection() {
                           className={`h-5 w-5 transition ${
                             active
                               ? "text-gold"
-                              : "text-white/30 group-hover:text-gold/60"
+                              : "text-white/55 group-hover:text-gold/60"
                           }`}
                         />
                       </div>
@@ -228,7 +228,7 @@ export function ContactSection() {
               {/* Fields */}
               <div className="mt-10 grid gap-5 sm:grid-cols-2">
                 <div className="grid gap-2">
-                  <label htmlFor="contact-name" className="text-xs uppercase tracking-[0.2em] text-white/40">
+                  <label htmlFor="contact-name" className="text-xs uppercase tracking-[0.2em] text-white/60">
                     Name
                   </label>
                   <input
@@ -245,7 +245,7 @@ export function ContactSection() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <label htmlFor="contact-email" className="text-xs uppercase tracking-[0.2em] text-white/40">
+                  <label htmlFor="contact-email" className="text-xs uppercase tracking-[0.2em] text-white/60">
                     Email
                   </label>
                   <input
@@ -264,7 +264,7 @@ export function ContactSection() {
               </div>
 
               <div className="mt-5 grid gap-2">
-                <label htmlFor="contact-vision" className="text-xs uppercase tracking-[0.2em] text-white/40">
+                <label htmlFor="contact-vision" className="text-xs uppercase tracking-[0.2em] text-white/60">
                   Your Vision
                 </label>
                 <textarea
@@ -323,7 +323,7 @@ export function ContactSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/40"
+              className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/60"
             >
               <a
                 href="mailto:hello@swetkaar.com"

@@ -281,7 +281,7 @@ export default function TrainingPage() {
                       className="h-full w-full object-contain opacity-70 transition hover:opacity-100"
                     />
                   </div>
-                  <span className="text-[10px] font-medium text-white/40">
+                  <span className="text-[10px] font-medium text-white/60">
                     {tool.name}
                   </span>
                 </motion.div>

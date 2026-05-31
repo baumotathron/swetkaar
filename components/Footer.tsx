@@ -8,7 +8,7 @@ export function Footer() {
       <div className="rounded-[2.5rem] border border-white/10 bg-black/60 px-8 py-10 backdrop-blur">
         <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
           <div>
-            <span className="text-xs uppercase tracking-[0.4em] text-white/40">
+            <span className="text-xs uppercase tracking-[0.4em] text-white/60">
               Swetkaar AI
             </span>
             <h3 className="mt-4 font-display text-3xl text-white">
@@ -16,7 +16,7 @@ export function Footer() {
             </h3>
           </div>
           <div className="flex flex-col items-end gap-3">
-            <span className="text-[11px] uppercase tracking-[0.4em] text-white/40">
+            <span className="text-[11px] uppercase tracking-[0.4em] text-white/60">
               hello@swetkaar.com
             </span>
             <a
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
         <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-electric/40 to-transparent" />
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <nav className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.3em] text-white/50">
+          <nav className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.3em] text-white/70">
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -44,7 +44,7 @@ export function Footer() {
               </Link>
             ))}
           </nav>
-          <div className="text-xs uppercase tracking-[0.3em] text-white/40">
+          <div className="text-xs uppercase tracking-[0.3em] text-white/60">
             © {new Date().getFullYear()} Swetkaar AI. All creation reserved.
           </div>
         </div>

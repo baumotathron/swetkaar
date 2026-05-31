@@ -274,7 +274,7 @@ export function Hero() {
                   <h3 className="font-display text-base font-semibold text-white">
                     {svc.title}
                   </h3>
-                  <p className="mt-1 text-sm text-white/50 transition group-hover:text-white/70">
+                  <p className="mt-1 text-sm text-white/70 transition group-hover:text-white/70">
                     {svc.desc}
                   </p>
                 </div>
