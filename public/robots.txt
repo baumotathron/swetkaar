@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://swetkaar.ai/sitemap.xml
+Sitemap: https://www.swetkaar.com/sitemap.xml
 
 # Disallow admin and private areas (if any)
 Disallow: /api/

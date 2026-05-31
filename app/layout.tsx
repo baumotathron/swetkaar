@@ -16,7 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://swetkaar.ai'),
+  metadataBase: new URL('https://www.swetkaar.com'),
   title: {
     default: "Swetkaar AI — Next-Generation Creative Agency",
     template: "%s | Swetkaar AI"
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://swetkaar.ai",
+    url: "https://www.swetkaar.com",
     siteName: "Swetkaar AI",
     title: "Swetkaar AI — Next-Generation Creative Agency",
     description:
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     // bing: "your-bing-verification-code",
   },
   alternates: {
-    canonical: "https://swetkaar.ai",
+    canonical: "https://www.swetkaar.com",
   },
 };
 
@@ -96,8 +96,8 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Swetkaar AI",
-  "url": "https://swetkaar.ai",
-  "logo": "https://swetkaar.ai/swetkaar_logo.webp",
+  "url": "https://www.swetkaar.com",
+  "logo": "https://www.swetkaar.com/swetkaar_logo.webp",
   "description": "Swetkaar AI crafts transformative brand worlds that fuse mythic creativity with advanced AI storytelling, design, and immersive experiences.",
   "email": "hello@swetkaar.com",
   "telephone": "+91-9825375509",
@@ -123,11 +123,11 @@ const websiteStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Swetkaar AI",
-  "url": "https://swetkaar.ai",
+  "url": "https://www.swetkaar.com",
   "description": "Next-Generation Creative Agency specializing in AI-powered branding, storytelling, and immersive experiences.",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://swetkaar.ai?q={search_term_string}",
+    "target": "https://www.swetkaar.com?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
