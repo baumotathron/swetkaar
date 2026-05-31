@@ -228,12 +228,14 @@ export function ContactSection() {
               {/* Fields */}
               <div className="mt-10 grid gap-5 sm:grid-cols-2">
                 <div className="grid gap-2">
-                  <label className="text-xs uppercase tracking-[0.2em] text-white/40">
+                  <label htmlFor="contact-name" className="text-xs uppercase tracking-[0.2em] text-white/40">
                     Name
                   </label>
                   <input
                     type="text"
                     placeholder="Your name"
+                    id="contact-name"
+                    autoComplete="name"
                     required
                     value={formData.name}
                     onChange={(e) =>
@@ -243,12 +245,14 @@ export function ContactSection() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <label className="text-xs uppercase tracking-[0.2em] text-white/40">
+                  <label htmlFor="contact-email" className="text-xs uppercase tracking-[0.2em] text-white/40">
                     Email
                   </label>
                   <input
                     type="email"
                     placeholder="you@company.com"
+                    id="contact-email"
+                    autoComplete="email"
                     required
                     value={formData.email}
                     onChange={(e) =>
@@ -260,10 +264,11 @@ export function ContactSection() {
               </div>
 
               <div className="mt-5 grid gap-2">
-                <label className="text-xs uppercase tracking-[0.2em] text-white/40">
+                <label htmlFor="contact-vision" className="text-xs uppercase tracking-[0.2em] text-white/40">
                   Your Vision
                 </label>
                 <textarea
+                  id="contact-vision"
                   rows={4}
                   placeholder="Tell us what you're dreaming into reality..."
                   required

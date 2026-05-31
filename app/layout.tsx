@@ -95,15 +95,24 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://www.swetkaar.com/#organization",
   "name": "Swetkaar AI",
   "url": "https://www.swetkaar.com",
   "logo": "https://www.swetkaar.com/swetkaar_logo.webp",
-  "description": "Swetkaar AI crafts transformative brand worlds that fuse mythic creativity with advanced AI storytelling, design, and immersive experiences.",
+  "image": "https://www.swetkaar.com/swetkaar_logo.webp",
+  "description": "Swetkaar AI is an AI-powered creative agency delivering premium branding, cinematic AI ad films, and AI automation that drives real revenue.",
   "email": "hello@swetkaar.com",
   "telephone": "+91-9825375509",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US"
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "hello@swetkaar.com",
+    "telephone": "+91-9825375509",
+    "availableLanguage": ["English"]
   },
   "sameAs": [
     "https://www.instagram.com/swetkaar.ai/"
