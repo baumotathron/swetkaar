@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "AI Branding, Ad Films & AI Consulting Services",
   description:
-    "Strategic branding, AI films & ads, and AI automations. Video content, cinematic product visuals, hero ad films, intelligent analytics, agentic AI systems, and custom AI integration.",
+    "AI-powered branding, cinematic ad films, and custom AI automation for brands. Strategy-first creative delivered in weeks — explore Swetkaar AI services.",
   alternates: { canonical: "https://www.swetkaar.com/services" },
   openGraph: {
-    title: "Services | Swetkaar AI",
+    title: "AI Branding, Ad Films & AI Consulting | Swetkaar AI",
     description:
-      "Strategic branding, AI films & ads, and AI automations. Video content, cinematic product visuals, hero ad films, intelligent analytics, agentic AI systems, and custom AI integration.",
+      "AI-powered branding, cinematic ad films, and custom AI automation for brands. Strategy-first creative delivered in weeks — explore Swetkaar AI services.",
     url: "https://www.swetkaar.com/services",
   },
 };

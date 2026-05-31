@@ -18,11 +18,11 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.swetkaar.com'),
   title: {
-    default: "Swetkaar AI — Next-Generation Creative Agency",
+    default: "AI Creative Agency — Branding, AI Ad Films & Automation | Swetkaar AI",
     template: "%s | Swetkaar AI"
   },
   description:
-    "Swetkaar AI crafts transformative brand worlds that fuse mythic creativity with advanced AI storytelling, design, and immersive experiences. AI-powered branding, social media growth, creative direction, film & VFX, content creation, and web experiences.",
+    "Swetkaar AI is an AI-powered creative agency delivering premium branding, cinematic AI ad films, and AI automation that drives real revenue — strategy-first work shipped in weeks, not months.",
   keywords: [
     "AI creative agency",
     "branding and identity",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.swetkaar.com",
     siteName: "Swetkaar AI",
-    title: "Swetkaar AI — Next-Generation Creative Agency",
+    title: "AI Creative Agency — Branding, AI Ad Films & Automation | Swetkaar AI",
     description:
-      "Craft transformative brand worlds that fuse mythic creativity with advanced AI storytelling, design, and immersive experiences.",
+      "AI-powered branding, cinematic AI ad films, and AI automation that drives real revenue — premium creative delivered in weeks, not months.",
     images: [
       {
         url: "/swetkaar_logo.webp",
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swetkaar AI — Next-Generation Creative Agency",
+    title: "AI Creative Agency — Branding, AI Ad Films & Automation | Swetkaar AI",
     description:
-      "Craft transformative brand worlds that fuse mythic creativity with advanced AI storytelling, design, and immersive experiences.",
+      "AI-powered branding, cinematic AI ad films, and AI automation that drives real revenue — premium creative delivered in weeks, not months.",
     images: ["/swetkaar_logo.webp"],
     creator: "@swetkaarai",
   },

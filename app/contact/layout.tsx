@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact — Start Your AI Branding or Ad Film Project",
   description:
     "Get in touch with Swetkaar AI for branding, AI films, consulting, or training. We respond within 48 hours. Hello@swetkaar.com.",
   alternates: { canonical: "https://www.swetkaar.com/contact" },
