@@ -53,21 +53,12 @@ export const metadata: Metadata = {
     title: "AI Creative Agency — Branding, AI Ad Films & Automation | Swetkaar AI",
     description:
       "AI-powered branding, cinematic AI ad films, and AI automation that drives real revenue — premium creative delivered in weeks, not months.",
-    images: [
-      {
-        url: "/swetkaar_logo.webp",
-        width: 1200,
-        height: 630,
-        alt: "Swetkaar AI - Creative Intelligence Lab",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Creative Agency — Branding, AI Ad Films & Automation | Swetkaar AI",
     description:
       "AI-powered branding, cinematic AI ad films, and AI automation that drives real revenue — premium creative delivered in weeks, not months.",
-    images: ["/swetkaar_logo.webp"],
     creator: "@swetkaarai",
   },
   robots: {
