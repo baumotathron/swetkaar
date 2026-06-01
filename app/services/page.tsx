@@ -217,16 +217,11 @@ export default function ServicesPage() {
             <div className="orb bottom-[-140px] right-[-120px] h-[260px] w-[260px] bg-gold/30" />
           </div>
           <div className="relative z-10 mx-auto w-full max-w-3xl text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease }}
-              className="font-display text-4xl leading-tight text-white md:text-5xl lg:text-6xl"
-            >
+            <h1 className="font-display text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
               Everything your brand needs to{" "}
               <span className="text-gold">stand out</span> and{" "}
               <span className="text-gold">scale</span>
-            </motion.h1>
+            </h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}

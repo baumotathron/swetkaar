@@ -153,17 +153,11 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
         {/* Left — headline */}
         <div className="flex-1">
-          <motion.h1
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            custom={0.1}
-            className="mt-6 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]"
-          >
+          <h1 className="mt-6 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">
             The Perfect Fusion of{" "}
             <span className="text-gold">Human Imagination</span>{" "}
             & AI Power
-          </motion.h1>
+          </h1>
           <motion.p
             variants={container}
             initial="hidden"

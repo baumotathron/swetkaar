@@ -197,16 +197,11 @@ export default function TrainingPage() {
               Training Program
             </motion.span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease }}
-              className="mt-8 font-display text-4xl leading-[1.15] text-white md:text-5xl lg:text-6xl"
-            >
+            <h1 className="mt-8 font-display text-4xl leading-[1.15] text-white md:text-5xl lg:text-6xl">
               Product Management
               <br />
               <span className="text-gold">Powered by AI</span>
-            </motion.h1>
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
