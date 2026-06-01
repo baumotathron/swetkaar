@@ -118,19 +118,19 @@ const heroServices = [
     icon: Palette,
     title: "Strategic Branding",
     desc: "Brand report + premium content production",
-    href: "/services#strategic-branding",
+    href: "/services/branding",
   },
   {
     icon: Film,
     title: "AI Films & Ads",
     desc: "Cinematic ads by VFX experts using AI",
-    href: "/services#ai-films-ads",
+    href: "/services/ai-films",
   },
   {
     icon: Bot,
     title: "AI Consulting",
     desc: "Impact audit + custom AI implementation",
-    href: "/services#ai-consulting",
+    href: "/services/ai-consulting",
   },
 ];
 

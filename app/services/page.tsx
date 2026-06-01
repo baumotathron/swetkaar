@@ -112,11 +112,104 @@ const services = [
 ];
 
 
+const SLUG: Record<string, string> = { "strategic-branding": "branding", "ai-films-ads": "ai-films", "ai-consulting": "ai-consulting" };
+const servicesOverviewJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.swetkaar.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.swetkaar.com/services"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Swetkaar AI do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Swetkaar AI is an AI-powered creative agency offering strategic branding, cinematic AI ad films, and AI consulting & automation — combining human creative direction with AI-accelerated execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you deliver a project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most projects ship in weeks, not months, because we pair senior creative direction with AI-accelerated production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you replace human creatives with AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AI amplifies our speed and scale, while strategy, taste, and creative direction stay human."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an AI ad film project include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Concept and scripting, storyboard and shot planning, VFX production using AI, sound design, and platform-optimized cutdowns for every channel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a free call from the contact page. We respond within 48 hours with a tailored collaboration map."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strategic Branding",
+          "url": "https://www.swetkaar.com/services/branding"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Films & Ads",
+          "url": "https://www.swetkaar.com/services/ai-films"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Consulting & Implementation",
+          "url": "https://www.swetkaar.com/services/ai-consulting"
+        }
+      ]
+    }
+  ]
+};
+
 export default function ServicesPage() {
   return (
     <div className="relative flex min-h-screen flex-col">
       <Navigation />
       <main className="flex-1">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesOverviewJsonLd) }} />
         {/* ── Hero ── */}
         <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-6 pt-44 pb-24">
           <div className="pointer-events-none absolute inset-0">
@@ -170,7 +263,7 @@ export default function ServicesPage() {
           {services.map((s) => (
             <a
               key={s.id}
-              href={`#${s.id}`}
+              href={`/services/${SLUG[s.id]}`}
               className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/70 transition hover:border-gold/40 hover:bg-gold/10 hover:text-gold"
             >
               <s.icon className="h-4 w-4" />
