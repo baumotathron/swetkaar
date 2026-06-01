@@ -64,7 +64,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       <main className="flex-1">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-        <section className="relative mx-auto w-full max-w-4xl px-6 pt-44 pb-16">
+        <nav aria-label="Breadcrumb" className="mx-auto w-full max-w-4xl px-6 pt-32 text-sm text-white/55">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li><Link href="/" className="transition hover:text-gold">Home</Link></li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li><Link href="/services" className="transition hover:text-gold">Services</Link></li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li className="text-white/80">{service.title}</li>
+          </ol>
+        </nav>
+        <section className="relative mx-auto w-full max-w-4xl px-6 pt-6 pb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">{service.eyebrow}</p>
           <h1 className="mt-5 font-display text-4xl leading-tight text-white md:text-5xl lg:text-6xl">{service.title}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">{service.intro}</p>

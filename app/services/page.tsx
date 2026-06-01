@@ -340,6 +340,13 @@ export default function ServicesPage() {
                   {/* Per-service CTA */}
                   <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
                     <Link
+                      href={`/services/${SLUG[service.id]}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm text-white/75 transition hover:border-gold/40 hover:text-gold"
+                    >
+                      Learn more
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <Link
                       href="/contact"
                       className="group/cta inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-black transition hover:bg-soft-gold"
                     >
